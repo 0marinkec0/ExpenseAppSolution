@@ -31,9 +31,9 @@
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Expense_Button = new System.Windows.Forms.Button();
+            this.Income_Button = new System.Windows.Forms.Button();
+            this.Delete_Button = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,40 +66,41 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.button3);
-            this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.Expense_Button);
+            this.panel4.Controls.Add(this.Income_Button);
+            this.panel4.Controls.Add(this.Delete_Button);
             this.panel4.Location = new System.Drawing.Point(480, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(321, 59);
             this.panel4.TabIndex = 3;
             // 
-            // button3
+            // Expense_Button
             // 
-            this.button3.Location = new System.Drawing.Point(219, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 45);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Expense";
-            this.button3.UseVisualStyleBackColor = true;
+            this.Expense_Button.Location = new System.Drawing.Point(219, 5);
+            this.Expense_Button.Name = "Expense_Button";
+            this.Expense_Button.Size = new System.Drawing.Size(88, 45);
+            this.Expense_Button.TabIndex = 2;
+            this.Expense_Button.Text = "Expense";
+            this.Expense_Button.UseVisualStyleBackColor = true;
+            this.Expense_Button.Click += new System.EventHandler(this.Expense_Button_Click);
             // 
-            // button2
+            // Income_Button
             // 
-            this.button2.Location = new System.Drawing.Point(125, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 45);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Income";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Income_Button.Location = new System.Drawing.Point(125, 5);
+            this.Income_Button.Name = "Income_Button";
+            this.Income_Button.Size = new System.Drawing.Size(88, 45);
+            this.Income_Button.TabIndex = 1;
+            this.Income_Button.Text = "Income";
+            this.Income_Button.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // Delete_Button
             // 
-            this.button1.Location = new System.Drawing.Point(31, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 45);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Delete_Button.Location = new System.Drawing.Point(31, 5);
+            this.Delete_Button.Name = "Delete_Button";
+            this.Delete_Button.Size = new System.Drawing.Size(88, 45);
+            this.Delete_Button.TabIndex = 0;
+            this.Delete_Button.Text = "Delete";
+            this.Delete_Button.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -170,7 +171,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(549, 361);
             this.dataGridView1.TabIndex = 3;
             // 
-            // Dashboard
+            // Transaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -179,7 +180,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.monthCalendar1);
-            this.Name = "Dashboard";
+            this.Name = "Transaction";
             this.Size = new System.Drawing.Size(810, 490);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -197,9 +198,9 @@
         private MonthCalendar monthCalendar1;
         private Panel panel1;
         private Panel panel4;
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button Expense_Button;
+        private Button Income_Button;
+        private Button Delete_Button;
         private Panel panel2;
         private Label label2;
         private Label label1;

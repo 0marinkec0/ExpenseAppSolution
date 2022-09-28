@@ -22,6 +22,22 @@ namespace ExpenseAppUI
 
         private void Dashboard_Btn_Click(object sender, EventArgs e)
         {
+            ShowDashboard();
+        }
+
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            ShowTransaction();
+        }
+
+        private void Transaction_Button_Click(object sender, EventArgs e)
+        {
+            ShowTransaction();
+        }
+
+        private void ShowTransaction()
+        {
             MainPanel.Controls.Clear();
             MainPanel.Controls.Add(new Transaction());
 
@@ -29,7 +45,7 @@ namespace ExpenseAppUI
             MessageBox.Show(Id.ToString());
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ShowDashboard()
         {
             MainPanel.Controls.Clear();
             MainPanel.Controls.Add(new Dashboard());
