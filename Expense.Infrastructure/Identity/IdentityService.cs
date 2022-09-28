@@ -30,7 +30,7 @@ namespace Expense.Infrastructure.Identity
 
             var registerResult = await _userManager.CreateAsync(user, password);
 
-            if (!registerResult.Succeeded /*== false*/)
+            if (!registerResult.Succeeded)
                 throw new Exception("Register is not successfull!");
 
             return RegisterResult.Successfull();
