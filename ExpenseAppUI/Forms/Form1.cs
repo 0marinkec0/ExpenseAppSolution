@@ -8,14 +8,12 @@ namespace ExpenseAppUI
 {
     public partial class Form1 : Form
     {
-        private readonly IIdentityService _identityService;
         private readonly IMediator _mediator;
         public static int Id;
 
-        public Form1(IIdentityService identityService, IMediator mediator)
+        public Form1(IMediator mediator)
         {
             InitializeComponent();
-            _identityService = identityService;
             _mediator = mediator;
         }
 
@@ -46,8 +44,6 @@ namespace ExpenseAppUI
 
         private void Login_Button_Click(object sender, EventArgs e)
         {
-            // var result = _identityService.Login(Login_Email_TextBox.Text, Login_Password_TextBox.Text);
-
             string email = Login_Email_TextBox.Text;
             string password = Login_Password_TextBox.Text;
 
@@ -67,8 +63,6 @@ namespace ExpenseAppUI
             string lname = LastName_TextBox.Text;
             string pass = Password_TextBox.Text;
             string passc = ConfirmPassword_TextBox.Text;
-
-            //var result = _identityService.Register(email, pass, fname, lname);
 
             var result = _mediator.Send(new RegisterCommand(email, fname, lname,pass));    
             if (result.Result.Success)

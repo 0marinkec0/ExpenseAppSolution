@@ -1,5 +1,6 @@
 ﻿using Expense.Application.Common.Interface;
 using Expense.Application.Common.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 
 namespace Expense.Infrastructure.Identity

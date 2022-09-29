@@ -1,6 +1,8 @@
 using Microsoft.Extensions.DependencyInjection;
 using Expense.Infrastructure;
 using Expense.Application;
+using ExpenseAppUI.Forms;
+using System;
 
 namespace ExpenseAppUI
 {
@@ -11,6 +13,7 @@ namespace ExpenseAppUI
         /// </summary>
         /// 
         public static bool isValid = false;
+        public static bool isExpense = false;
 
         [STAThread]
         static void Main()
@@ -22,17 +25,19 @@ namespace ExpenseAppUI
             ConfigureServices(services);
 
             services.AddScoped<Form1>();
-                     
+            services.AddScoped<ExpenseForm>();
+
             using (ServiceProvider serviceProvider = services.BuildServiceProvider())
-            { 
+            {
                 var form1 = serviceProvider.GetRequiredService<Form1>();
+
                 Application.Run(form1);
-            } 
-       
-            if (isValid == true)
-            { 
-                Application.Run(new MainForm(Form1.Id));
             }
+
+            if (isValid == true)
+            {
+                Application.Run(new MainForm(Form1.Id));
+            }      
         }
 
         private static void ConfigureServices(ServiceCollection services)

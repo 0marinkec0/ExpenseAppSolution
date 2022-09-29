@@ -76,31 +76,40 @@
             // 
             // Expense_Button
             // 
+            this.Expense_Button.BackColor = System.Drawing.Color.IndianRed;
+            this.Expense_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Expense_Button.ForeColor = System.Drawing.Color.White;
             this.Expense_Button.Location = new System.Drawing.Point(219, 5);
             this.Expense_Button.Name = "Expense_Button";
             this.Expense_Button.Size = new System.Drawing.Size(88, 45);
             this.Expense_Button.TabIndex = 2;
-            this.Expense_Button.Text = "Expense";
-            this.Expense_Button.UseVisualStyleBackColor = true;
+            this.Expense_Button.Text = "- Expense";
+            this.Expense_Button.UseVisualStyleBackColor = false;
             this.Expense_Button.Click += new System.EventHandler(this.Expense_Button_Click);
             // 
             // Income_Button
             // 
+            this.Income_Button.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.Income_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Income_Button.ForeColor = System.Drawing.Color.White;
             this.Income_Button.Location = new System.Drawing.Point(125, 5);
             this.Income_Button.Name = "Income_Button";
             this.Income_Button.Size = new System.Drawing.Size(88, 45);
             this.Income_Button.TabIndex = 1;
-            this.Income_Button.Text = "Income";
-            this.Income_Button.UseVisualStyleBackColor = true;
+            this.Income_Button.Text = "+ Income";
+            this.Income_Button.UseVisualStyleBackColor = false;
             // 
             // Delete_Button
             // 
+            this.Delete_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete_Button.ForeColor = System.Drawing.Color.Red;
             this.Delete_Button.Location = new System.Drawing.Point(31, 5);
             this.Delete_Button.Name = "Delete_Button";
             this.Delete_Button.Size = new System.Drawing.Size(88, 45);
             this.Delete_Button.TabIndex = 0;
-            this.Delete_Button.Text = "Delete";
+            this.Delete_Button.Text = "X Delete";
             this.Delete_Button.UseVisualStyleBackColor = true;
+            this.Delete_Button.Click += new System.EventHandler(this.Delete_Button_Click);
             // 
             // panel2
             // 
