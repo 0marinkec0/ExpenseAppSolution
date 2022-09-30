@@ -67,10 +67,5 @@ namespace Expense.Infrastructure.Data
             var result = await base.SaveChangesAsync(cancellationToken);
             return result;
         }
-
-        public Task<int> SaveChangesAsync()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -28,6 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -35,22 +41,28 @@
             this.Income_Button = new System.Windows.Forms.Button();
             this.Delete_Button = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Income_Label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Expense_Label = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridTable = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTable)).BeginInit();
             this.SuspendLayout();
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(20, 126);
+            this.monthCalendar1.Location = new System.Drawing.Point(9, 101);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
             // 
@@ -60,7 +72,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(804, 62);
+            this.panel1.Size = new System.Drawing.Size(841, 62);
             this.panel1.TabIndex = 1;
             // 
             // panel4
@@ -71,7 +83,7 @@
             this.panel4.Controls.Add(this.Delete_Button);
             this.panel4.Location = new System.Drawing.Point(480, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(321, 59);
+            this.panel4.Size = new System.Drawing.Size(358, 59);
             this.panel4.TabIndex = 3;
             // 
             // Expense_Button
@@ -79,9 +91,9 @@
             this.Expense_Button.BackColor = System.Drawing.Color.IndianRed;
             this.Expense_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Expense_Button.ForeColor = System.Drawing.Color.White;
-            this.Expense_Button.Location = new System.Drawing.Point(219, 5);
+            this.Expense_Button.Location = new System.Drawing.Point(255, 5);
             this.Expense_Button.Name = "Expense_Button";
-            this.Expense_Button.Size = new System.Drawing.Size(88, 45);
+            this.Expense_Button.Size = new System.Drawing.Size(100, 45);
             this.Expense_Button.TabIndex = 2;
             this.Expense_Button.Text = "- Expense";
             this.Expense_Button.UseVisualStyleBackColor = false;
@@ -92,9 +104,9 @@
             this.Income_Button.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.Income_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Income_Button.ForeColor = System.Drawing.Color.White;
-            this.Income_Button.Location = new System.Drawing.Point(125, 5);
+            this.Income_Button.Location = new System.Drawing.Point(149, 5);
             this.Income_Button.Name = "Income_Button";
-            this.Income_Button.Size = new System.Drawing.Size(88, 45);
+            this.Income_Button.Size = new System.Drawing.Size(100, 45);
             this.Income_Button.TabIndex = 1;
             this.Income_Button.Text = "+ Income";
             this.Income_Button.UseVisualStyleBackColor = false;
@@ -114,22 +126,22 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.Income_Label);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(6, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(233, 59);
             this.panel2.TabIndex = 0;
             // 
-            // label2
+            // Income_Label
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(132, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "$0.00";
+            this.Income_Label.AutoSize = true;
+            this.Income_Label.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Income_Label.Location = new System.Drawing.Point(132, 27);
+            this.Income_Label.Name = "Income_Label";
+            this.Income_Label.Size = new System.Drawing.Size(55, 23);
+            this.Income_Label.TabIndex = 1;
+            this.Income_Label.Text = "$0.00";
             // 
             // label1
             // 
@@ -144,22 +156,22 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.Expense_Label);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(244, 3);
+            this.panel3.Location = new System.Drawing.Point(246, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(233, 59);
             this.panel3.TabIndex = 2;
             // 
-            // label3
+            // Expense_Label
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(132, 27);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 23);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "$0.00";
+            this.Expense_Label.AutoSize = true;
+            this.Expense_Label.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Expense_Label.Location = new System.Drawing.Point(132, 27);
+            this.Expense_Label.Name = "Expense_Label";
+            this.Expense_Label.Size = new System.Drawing.Size(55, 23);
+            this.Expense_Label.TabIndex = 1;
+            this.Expense_Label.Text = "$0.00";
             // 
             // label4
             // 
@@ -171,33 +183,119 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Expense:";
             // 
-            // dataGridView1
+            // dataGridTable
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(255, 126);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(549, 361);
-            this.dataGridView1.TabIndex = 3;
+            this.dataGridTable.AllowUserToAddRows = false;
+            this.dataGridTable.AllowUserToDeleteRows = false;
+            this.dataGridTable.AllowUserToResizeRows = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridTable.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridTable.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(53)))), ((int)(((byte)(101)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(53)))), ((int)(((byte)(101)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridTable.ColumnHeadersHeight = 50;
+            this.dataGridTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(53)))), ((int)(((byte)(101)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(232)))), ((int)(((byte)(245)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(67)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridTable.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridTable.Location = new System.Drawing.Point(220, 101);
+            this.dataGridTable.Name = "dataGridTable";
+            this.dataGridTable.ReadOnly = true;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dataGridTable.RowTemplate.Height = 25;
+            this.dataGridTable.Size = new System.Drawing.Size(624, 406);
+            this.dataGridTable.TabIndex = 3;
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 50F;
+            this.Column1.HeaderText = "Id";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle9.Format = "C2";
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Column3.HeaderText = "Amount";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            dataGridViewCellStyle10.Format = "d";
+            dataGridViewCellStyle10.NullValue = null;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle10;
+            this.Column4.HeaderText = "Date";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Type";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.FillWeight = 200F;
+            this.Column6.HeaderText = "Description";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // Transaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(248)))), ((int)(((byte)(252)))));
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridTable);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.monthCalendar1);
             this.Name = "Transaction";
-            this.Size = new System.Drawing.Size(810, 490);
+            this.Size = new System.Drawing.Size(847, 510);
+            this.Load += new System.EventHandler(this.Transaction_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTable)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -211,11 +309,17 @@
         private Button Income_Button;
         private Button Delete_Button;
         private Panel panel2;
-        private Label label2;
+        private Label Income_Label;
         private Label label1;
         private Panel panel3;
-        private Label label3;
+        private Label Expense_Label;
         private Label label4;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridTable;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
     }
 }

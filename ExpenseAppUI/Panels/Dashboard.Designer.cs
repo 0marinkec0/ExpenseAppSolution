@@ -40,14 +40,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
-            // Transaction
+            // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(248)))), ((int)(((byte)(252)))));
             this.Controls.Add(this.label1);
-            this.Name = "Transaction";
-            this.Size = new System.Drawing.Size(810, 490);
+            this.Name = "Dashboard";
+            this.Size = new System.Drawing.Size(847, 510);
             this.ResumeLayout(false);
             this.PerformLayout();
 

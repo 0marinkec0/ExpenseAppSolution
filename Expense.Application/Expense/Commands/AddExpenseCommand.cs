@@ -27,12 +27,14 @@ namespace Expense.Application.Auth.Expense.Commands
             {
                 Amount = request.amount,
                 Category = request.category,
-                DateCreated = request.time,
+                Date = request.time,
                 UserId = request.userId,
-                Type = request.type
+                Type = request.type,
+                Description = request.description
             };
 
-            await _dbContext.AppExpenses.AddAsync(expense);
+            _dbContext.AppExpenses.Add(expense);
+            await _dbContext.SaveChangesAsync();
 
             return Unit.Value;
         }

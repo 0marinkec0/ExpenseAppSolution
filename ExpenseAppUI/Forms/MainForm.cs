@@ -1,4 +1,8 @@
-﻿using MediatR;
+﻿using Expense.Application;
+using Expense.Infrastructure;
+using ExpenseAppUI.Forms;
+using MediatR;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ExpenseAppUI
 {
@@ -30,8 +34,18 @@ namespace ExpenseAppUI
 
         private void ShowTransaction()
         {
+            var services = new ServiceCollection();
+            services.AddApplicationServices();
+            services.AddInfrastructureServices();
+            services.AddScoped<Transaction>();
+            ServiceProvider serviceProvider = services.BuildServiceProvider();
+
+            var form2 = serviceProvider.GetRequiredService<Transaction>();
+
+
             MainPanel.Controls.Clear();
-            MainPanel.Controls.Add(new Transaction());
+            MainPanel.Controls.Add(form2);
+            // MainPanel.Controls.Add(new Transaction());
 
             //OBRISATI - TEST
             //MessageBox.Show(Id.ToString());

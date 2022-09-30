@@ -1,26 +1,21 @@
 ﻿using Expense.Application;
+using Expense.Application.Expense.Commands;
+using Expense.Application.Expense.Queries;
 using Expense.Infrastructure;
-using Expense.Infrastructure.Identity;
 using ExpenseAppUI.Forms;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace ExpenseAppUI
 {
     public partial class Transaction : UserControl
     {
-        public Transaction()
+        private readonly IMediator _mediator;
+
+        public Transaction(IMediator mediator)
         {
             InitializeComponent();
+            _mediator = mediator;
         }
 
         private void Expense_Button_Click(object sender, EventArgs e)
@@ -43,7 +38,31 @@ namespace ExpenseAppUI
 
         private void Delete_Button_Click(object sender, EventArgs e)
         {
+            var Id = (int)dataGridTable.CurrentRow.Cells["Column1"].Value;
 
+            _mediator.Send(new DeleteByIdCommand(Id));
+
+            LoadDataFromDbToDataGrid();
+        }
+
+        private void Transaction_Load(object sender, EventArgs e)
+        {
+            LoadDataFromDbToDataGrid();
+        }
+
+        private void LoadDataFromDbToDataGrid()
+        {
+            dataGridTable.Rows.Clear();
+            var result = _mediator.Send(new GetAllExpensesQuery(Form1.Id));
+
+            foreach (var expense in result.Result)
+            {
+                dataGridTable.Rows.Add(expense.Id, expense.Category, expense.Amount,
+                    expense.DateTime, expense.Type, expense.Description);
+            }
+
+            var sum = _mediator.Send(new GetExpenseAmountQuery());
+            Expense_Label.Text = $"{Math.Round(sum.Result,2)}$";
         }
     }
 }

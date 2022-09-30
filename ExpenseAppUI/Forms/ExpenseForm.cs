@@ -1,5 +1,6 @@
 ﻿using Expense.Application.Auth.Expense.Commands;
 using MediatR;
+using System.Transactions;
 
 namespace ExpenseAppUI.Forms
 {
@@ -27,7 +28,7 @@ namespace ExpenseAppUI.Forms
             string category = Category_TextBox.Text;
             int userId = Form1.Id;
 
-            _mediator.Send(new AddExpenseCommand(category, description, amount, userId, type, dateTime));
+            _mediator.Send(new AddExpenseCommand(category, description, amount, userId, type, dateTime));           
         }
     }
 }

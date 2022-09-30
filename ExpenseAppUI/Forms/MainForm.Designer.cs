@@ -46,7 +46,7 @@
             this.panel1.Controls.Add(this.Dashboard_Btn);
             this.panel1.Location = new System.Drawing.Point(12, 63);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(151, 488);
+            this.panel1.Size = new System.Drawing.Size(151, 510);
             this.panel1.TabIndex = 0;
             // 
             // Transaction_Button
@@ -86,7 +86,7 @@
             this.panel2.Controls.Add(this.button2);
             this.panel2.Location = new System.Drawing.Point(12, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(971, 54);
+            this.panel2.Size = new System.Drawing.Size(1004, 54);
             this.panel2.TabIndex = 1;
             // 
             // button3
@@ -122,7 +122,7 @@
             this.MainPanel.BackColor = System.Drawing.Color.White;
             this.MainPanel.Location = new System.Drawing.Point(169, 63);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(810, 490);
+            this.MainPanel.Size = new System.Drawing.Size(847, 510);
             this.MainPanel.TabIndex = 4;
             // 
             // MainForm
@@ -130,7 +130,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(248)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(1020, 575);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
