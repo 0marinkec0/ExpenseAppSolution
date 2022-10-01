@@ -8,12 +8,9 @@ namespace ExpenseAppUI
 {
     public partial class MainForm : Form
     {
-        private int Id;
-
-        public MainForm(int id)
+        public MainForm()
         {
             InitializeComponent();
-            Id = id;
         }
 
         private void Dashboard_Btn_Click(object sender, EventArgs e)

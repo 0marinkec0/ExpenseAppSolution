@@ -30,12 +30,14 @@
         {
             this.Login_Button = new System.Windows.Forms.Button();
             this.Login_Panel = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.Login_Email_TextBox = new System.Windows.Forms.TextBox();
             this.AccountLabel = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
             this.Password_Label = new System.Windows.Forms.Label();
-            this.Login_Password_TextBox = new System.Windows.Forms.TextBox();
             this.Email_Label = new System.Windows.Forms.Label();
-            this.Login_Email_TextBox = new System.Windows.Forms.TextBox();
             this.Register_Panel = new System.Windows.Forms.Panel();
             this.LoginLabel = new System.Windows.Forms.LinkLabel();
             this.Email = new System.Windows.Forms.Label();
@@ -51,6 +53,8 @@
             this.Register_Button = new System.Windows.Forms.Button();
             this.FirstName_TextBox = new System.Windows.Forms.TextBox();
             this.Login_Panel.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.Register_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,17 +76,59 @@
             // 
             // Login_Panel
             // 
+            this.Login_Panel.Controls.Add(this.flowLayoutPanel2);
+            this.Login_Panel.Controls.Add(this.flowLayoutPanel1);
             this.Login_Panel.Controls.Add(this.AccountLabel);
             this.Login_Panel.Controls.Add(this.label5);
             this.Login_Panel.Controls.Add(this.Password_Label);
-            this.Login_Panel.Controls.Add(this.Login_Password_TextBox);
             this.Login_Panel.Controls.Add(this.Email_Label);
             this.Login_Panel.Controls.Add(this.Login_Button);
-            this.Login_Panel.Controls.Add(this.Login_Email_TextBox);
             this.Login_Panel.Location = new System.Drawing.Point(41, 12);
             this.Login_Panel.Name = "Login_Panel";
             this.Login_Panel.Size = new System.Drawing.Size(416, 449);
             this.Login_Panel.TabIndex = 4;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.Controls.Add(this.textBox1);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(32, 227);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(365, 45);
+            this.flowLayoutPanel2.TabIndex = 8;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.ForeColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(3, 3);
+            this.textBox1.MinimumSize = new System.Drawing.Size(355, 35);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PlaceholderText = "Enter Password";
+            this.textBox1.Size = new System.Drawing.Size(355, 35);
+            this.textBox1.TabIndex = 0;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.Login_Email_TextBox);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(32, 119);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(365, 45);
+            this.flowLayoutPanel1.TabIndex = 7;
+            // 
+            // Login_Email_TextBox
+            // 
+            this.Login_Email_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.Login_Email_TextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Login_Email_TextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Login_Email_TextBox.ForeColor = System.Drawing.Color.White;
+            this.Login_Email_TextBox.Location = new System.Drawing.Point(3, 3);
+            this.Login_Email_TextBox.MinimumSize = new System.Drawing.Size(355, 35);
+            this.Login_Email_TextBox.Name = "Login_Email_TextBox";
+            this.Login_Email_TextBox.PlaceholderText = "Enter E-mail";
+            this.Login_Email_TextBox.Size = new System.Drawing.Size(355, 35);
+            this.Login_Email_TextBox.TabIndex = 0;
             // 
             // AccountLabel
             // 
@@ -121,16 +167,6 @@
             this.Password_Label.TabIndex = 4;
             this.Password_Label.Text = "Password";
             // 
-            // Login_Password_TextBox
-            // 
-            this.Login_Password_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.Login_Password_TextBox.ForeColor = System.Drawing.Color.White;
-            this.Login_Password_TextBox.Location = new System.Drawing.Point(32, 227);
-            this.Login_Password_TextBox.Multiline = true;
-            this.Login_Password_TextBox.Name = "Login_Password_TextBox";
-            this.Login_Password_TextBox.Size = new System.Drawing.Size(355, 35);
-            this.Login_Password_TextBox.TabIndex = 3;
-            // 
             // Email_Label
             // 
             this.Email_Label.AutoSize = true;
@@ -141,16 +177,6 @@
             this.Email_Label.Size = new System.Drawing.Size(48, 21);
             this.Email_Label.TabIndex = 2;
             this.Email_Label.Text = "Email";
-            // 
-            // Login_Email_TextBox
-            // 
-            this.Login_Email_TextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.Login_Email_TextBox.ForeColor = System.Drawing.Color.White;
-            this.Login_Email_TextBox.Location = new System.Drawing.Point(32, 120);
-            this.Login_Email_TextBox.Multiline = true;
-            this.Login_Email_TextBox.Name = "Login_Email_TextBox";
-            this.Login_Email_TextBox.Size = new System.Drawing.Size(355, 35);
-            this.Login_Email_TextBox.TabIndex = 0;
             // 
             // Register_Panel
             // 
@@ -228,6 +254,7 @@
             this.Password_TextBox.Name = "Password_TextBox";
             this.Password_TextBox.Size = new System.Drawing.Size(340, 35);
             this.Password_TextBox.TabIndex = 9;
+            this.Password_TextBox.UseSystemPasswordChar = true;
             // 
             // label7
             // 
@@ -281,6 +308,7 @@
             this.ConfirmPassword_TextBox.Name = "ConfirmPassword_TextBox";
             this.ConfirmPassword_TextBox.Size = new System.Drawing.Size(340, 35);
             this.ConfirmPassword_TextBox.TabIndex = 3;
+            this.ConfirmPassword_TextBox.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -324,7 +352,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(483, 473);
+            this.ClientSize = new System.Drawing.Size(961, 473);
             this.Controls.Add(this.Register_Panel);
             this.Controls.Add(this.Login_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -334,6 +362,10 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Login_Panel.ResumeLayout(false);
             this.Login_Panel.PerformLayout();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.Register_Panel.ResumeLayout(false);
             this.Register_Panel.PerformLayout();
             this.ResumeLayout(false);
@@ -348,7 +380,6 @@
         private TextBox Login_Email_TextBox;
         private Label label5;
         private Label Password_Label;
-        private TextBox Login_Password_TextBox;
         private Panel Register_Panel;
         private Label label8;
         private TextBox Password_TextBox;
@@ -359,10 +390,13 @@
         private TextBox ConfirmPassword_TextBox;
         private Label label3;
         private Button Register_Button;
-        private TextBox FirstName_TextBox;
         private LinkLabel AccountLabel;
         private Label Email;
         private TextBox Email_TextBox;
         private LinkLabel LoginLabel;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel flowLayoutPanel2;
+        private TextBox textBox1;
+        private TextBox FirstName_TextBox;
     }
 }

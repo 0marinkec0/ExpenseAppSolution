@@ -18,22 +18,19 @@ namespace ExpenseAppUI
             _mediator = mediator;
         }
 
+        private void Transaction_Load(object sender, EventArgs e)
+        {
+            LoadDataFromDbToDataGrid();
+        }
+
         private void Expense_Button_Click(object sender, EventArgs e)
         {
-            var services = new ServiceCollection();
-            services.AddApplicationServices();
-            services.AddInfrastructureServices();
-            services.AddScoped<ExpenseForm>();
-            ServiceProvider serviceProvider = services.BuildServiceProvider();
-                
-                    var form2 = serviceProvider.GetRequiredService<ExpenseForm>();
-                    
-                    form2.Show();
-                
-                //var expenseForm = new ExpenseForm(Form1.Id);
-                // expenseForm.Show();
+            new Forms.ExpenseForm(_mediator).ShowDialog();
+        }
 
-               // Program.isExpense = true;
+        private void Income_Button_Click(object sender, EventArgs e)
+        {
+            new Forms.IncomeForm(_mediator).ShowDialog();
         }
 
         private void Delete_Button_Click(object sender, EventArgs e)
@@ -45,14 +42,10 @@ namespace ExpenseAppUI
             LoadDataFromDbToDataGrid();
         }
 
-        private void Transaction_Load(object sender, EventArgs e)
-        {
-            LoadDataFromDbToDataGrid();
-        }
-
-        private void LoadDataFromDbToDataGrid()
+         void LoadDataFromDbToDataGrid()
         {
             dataGridTable.Rows.Clear();
+
             var result = _mediator.Send(new GetAllExpensesQuery(Form1.Id));
 
             foreach (var expense in result.Result)
@@ -61,8 +54,11 @@ namespace ExpenseAppUI
                     expense.DateTime, expense.Type, expense.Description);
             }
 
-            var sum = _mediator.Send(new GetExpenseAmountQuery());
-            Expense_Label.Text = $"{Math.Round(sum.Result,2)}$";
+            var expenseSum = _mediator.Send(new GetExpenseAmountQuery());
+            var incomeSum = _mediator.Send(new GetIncomeAmountQuery());
+
+            Expense_Label.Text = $"{Math.Round(expenseSum.Result,2)}$";
+            Income_Label.Text = $"{Math.Round(incomeSum.Result, 2)}$";
         }
     }
 }

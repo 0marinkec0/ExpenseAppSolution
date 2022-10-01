@@ -39,24 +39,26 @@
             // Amount_TextBox
             // 
             this.Amount_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Amount_TextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Amount_TextBox.Location = new System.Drawing.Point(31, 90);
             this.Amount_TextBox.Name = "Amount_TextBox";
             this.Amount_TextBox.PlaceholderText = "Amount";
-            this.Amount_TextBox.Size = new System.Drawing.Size(195, 23);
+            this.Amount_TextBox.Size = new System.Drawing.Size(195, 25);
             this.Amount_TextBox.TabIndex = 0;
             // 
             // Category_TextBox
             // 
             this.Category_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Category_TextBox.Location = new System.Drawing.Point(31, 158);
+            this.Category_TextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Category_TextBox.Location = new System.Drawing.Point(31, 156);
             this.Category_TextBox.Name = "Category_TextBox";
             this.Category_TextBox.PlaceholderText = "Category";
-            this.Category_TextBox.Size = new System.Drawing.Size(195, 23);
+            this.Category_TextBox.Size = new System.Drawing.Size(195, 25);
             this.Category_TextBox.TabIndex = 1;
             // 
             // Description_TextBox
             // 
-            this.Description_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Description_TextBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Description_TextBox.Location = new System.Drawing.Point(267, 90);
             this.Description_TextBox.Multiline = true;
             this.Description_TextBox.Name = "Description_TextBox";
@@ -105,7 +107,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(248)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(546, 288);
+            this.ClientSize = new System.Drawing.Size(544, 286);
             this.Controls.Add(this.Save_Button);
             this.Controls.Add(this.Close_Button);
             this.Controls.Add(this.DateTimePicker_ExpenseForm);
@@ -113,6 +115,7 @@
             this.Controls.Add(this.Category_TextBox);
             this.Controls.Add(this.Amount_TextBox);
             this.Name = "ExpenseForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ExpenseForm";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -25,7 +25,7 @@ namespace ExpenseAppUI
             ConfigureServices(services);
 
             services.AddScoped<Form1>();
-          //  services.AddScoped<MainForm>();
+            services.AddScoped<MainForm>();
             services.AddScoped<ExpenseForm>();
 
             using (ServiceProvider serviceProvider = services.BuildServiceProvider())
@@ -37,13 +37,13 @@ namespace ExpenseAppUI
 
             if (isValid == true)
             {
-               /* using (ServiceProvider serviceProvider = services.BuildServiceProvider())
+                using (ServiceProvider serviceProvider = services.BuildServiceProvider())
                 {
                     var mainForm = serviceProvider.GetRequiredService<MainForm>();
 
                     Application.Run(mainForm);
-                }*/
-                   Application.Run(new MainForm(Form1.Id));
+                }
+                  // Application.Run(new MainForm(Form1.Id));
             }      
         }
 

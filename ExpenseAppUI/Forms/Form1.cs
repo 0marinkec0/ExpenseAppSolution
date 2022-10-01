@@ -1,7 +1,5 @@
 using Expense.Application.Auth.Login;
 using Expense.Application.Auth.Register;
-using Expense.Application.Common.Interface;
-using Expense.Infrastructure.Identity;
 using MediatR;
 
 namespace ExpenseAppUI
@@ -45,7 +43,7 @@ namespace ExpenseAppUI
         private void Login_Button_Click(object sender, EventArgs e)
         {
             string email = Login_Email_TextBox.Text;
-            string password = Login_Password_TextBox.Text;
+            string password = textBox1.Text;
 
             var result = _mediator.Send(new LoginCommand(email, password));
             if (result.Result.Success)
